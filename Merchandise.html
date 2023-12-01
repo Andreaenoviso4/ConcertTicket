@@ -39,11 +39,12 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large">TOUR</a>
-  <a href="Andrea.html" class="w3-bar-item w3-button w3-padding-large" onclick="scrollToSection('contact')">CONTACT</a>
+  <a href="Andrea.html#tour" class="w3-bar-item w3-button w3-padding-large" onclick="scrollToSection('tour')">TOUR</a>
+  <a href="Andrea.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="scrollToSection('contact')">CONTACT</a>
   <a href="Merchandise.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-  <a href="Andrea.html" class="w3-bar-item w3-button w3-padding-large" onclick="scrollToSection('#band')">ABOUT US</a>
+  <a href="Andrea.html#band" class="w3-bar-item w3-button w3-padding-large" onclick="scrollToSection('band')">ABOUT US</a>
 </div>
+
 
 
 
@@ -114,8 +115,10 @@ body {font-family: "Lato", sans-serif}
 <script>
 
 function scrollToSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+ 
+  window.location.href = "Andrea.html#" + sectionId;
 }
+
 
 // Close modal on clicking outside
 var modal = document.getElementById('ticketModal');
