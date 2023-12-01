@@ -114,10 +114,11 @@ body {font-family: "Lato", sans-serif}
 
 <script>
 
-function scrollToSection(sectionId) {
- 
-  window.location.href = "Andrea.html#" + sectionId;
-}
+ function scrollToSection(sectionId) {
+    var element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
 
 // Close modal on clicking outside
